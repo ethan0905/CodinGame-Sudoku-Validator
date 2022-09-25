@@ -1,8 +1,7 @@
 # CodingGame-Sudoku-Validator
 
 ### Expertise:  
-Statement  
-2D arrays  
+- Statement  
+- 2D arrays  
 
-### Grade:  
-100%  
+### Grade:  100%  
