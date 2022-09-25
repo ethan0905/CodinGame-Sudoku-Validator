@@ -3,11 +3,6 @@
 #include <string.h>
 #include <stdbool.h>
 
-/**
- * Auto-generated code below aims at helping you parse
- * the standard input according to the problem statement.
- **/
-
 bool    verify_line(int grid[9][9], int line_nb)
 {
     int value_to_check;
@@ -24,7 +19,6 @@ bool    verify_line(int grid[9][9], int line_nb)
                     return (true);
             }
         }
-        // printf("%d", grid[line_nb][i]);
     }
 
     return (false);
@@ -46,7 +40,6 @@ bool    verify_column(int grid[9][9], int column_nb)
                     return (true);
             }
         }
-        // printf("%d", grid[line_nb][i]);
     }
 
     return (false);
@@ -69,7 +62,6 @@ bool    check_value(int grid[9][9], int value, int start_i, int start_j)
                 count++;
                 // printf("VALUE FOUND: %d - %d\n", value, count);
             }
-            // printf("value: [%d]\n", value);
         }
     }
 
@@ -110,14 +102,11 @@ bool    verify_subgrid(int grid[9][9], int subgrid_nb)
         for ( ; i < start_i + 3; i++)
         {
             value_to_check = grid[j][i];
-            // printf("value a check [%d]\n", value_to_check);
+            // printf("value to check [%d]\n", value_to_check);
 
             if (check_value(grid, value_to_check, start_i, start_j) == true)
                 return (true);
-
-            // printf("[%d]", grid[j][i]);
         }
-        // printf("%d", grid[line_nb][i]);
     }
 
     return (false);
@@ -165,19 +154,14 @@ int main()
         // printf("\n");
     }
 
-    // printf("\n");
-    // printf("bool test: %d", verify_line(grid, 0)); //si true -> renvoie grid false
-    // printf("\n");
+	// test verify_line() function
+    // printf("bool test: %d", verify_line(grid, 0));
 
-    // printf("\n");
-    // printf("bool test: %d", verify_column(grid, 0)); //si true -> renvoie grid false
-    // printf("\n");
+	// test verify_column() function
+    // printf("bool test: %d", verify_column(grid, 0));
 
-    // printf("\n");
-    // printf("bool test: %d", verify_subgrid(grid, 0)); //si true -> renvoie grid false
-    // // printf("bool test: %d", verify_subgrid(grid, 1)); //si true -> renvoie grid false
-    // // printf("bool test: %d", verify_subgrid(grid, 2)); //si true -> renvoie grid false
-    // printf("\n");
+	// test verify_subgrid() function
+    // printf("bool test: %d", verify_subgrid(grid, 0));
 
 
     // Write an answer using printf(). DON'T FORGET THE TRAILING \n
