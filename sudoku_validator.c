@@ -45,7 +45,7 @@ bool    verify_column(int grid[9][9], int column_nb)
     return (false);
 }
 
-bool    check_value(int grid[9][9], int value, int start_i, int start_j)
+bool    check_value_inside_subgrid(int grid[9][9], int value, int start_i, int start_j)
 {
     int count = 0;
 
@@ -104,7 +104,7 @@ bool    verify_subgrid(int grid[9][9], int subgrid_nb)
             value_to_check = grid[j][i];
             // printf("value to check [%d]\n", value_to_check);
 
-            if (check_value(grid, value_to_check, start_i, start_j) == true)
+            if (check_value_inside_subgrid(grid, value_to_check, start_i, start_j) == true)
                 return (true);
         }
     }
